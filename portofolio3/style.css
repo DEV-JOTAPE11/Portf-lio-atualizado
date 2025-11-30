@@ -376,6 +376,11 @@ hr {
 
 }
 
+.btn-send-wpp {
+  text-decoration: none;
+  color: white;
+}
+
 .services{
     margin: 160px 200px;
     display: flex;
