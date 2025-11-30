@@ -160,3 +160,31 @@ if (hamburger && navMenu) {
         navMenu.classList.remove("active");
     }));
 }
+
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Impede a página de recarregar
+
+    // 1. Pega os valores digitados
+    const name = this.user_name.value;
+    const email = this.user_email.value;
+    const message = this.message.value;
+
+    // 2. Formata a mensagem que vai aparecer no WhatsApp
+    // O "\n" cria uma quebra de linha
+    const fullMessage = `Olá! Meu nome é ${name}.\nMeu email é: ${email}\n\nMensagem: ${message}`;
+
+    // 3. Cria o link do WhatsApp com a mensagem codificada
+    // Substitua o número abaixo pelo seu se necessário (com código do país e DDD)
+    const phoneNumber = "5538998304003"; 
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
+
+    // 4. Abre o WhatsApp numa nova aba
+    window.open(whatsappUrl, '_blank');
+    
+    // Opcional: Limpa o formulário depois de enviar
+    this.reset();
+  });
+}

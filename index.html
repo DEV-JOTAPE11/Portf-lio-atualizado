@@ -1,320 +1,506 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300..800&family=Playfair+Display:wght@400..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300..800&family=Playfair+Display:wght@400..900&family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <div id="loading-screen">
-  <div class="loading-content">
-    <i class="fa-solid fa-laptop-code fa-5x main-icon hidden"></i>
+      <div class="loading-content">
+        <i class="fa-solid fa-laptop-code fa-5x main-icon hidden"></i>
 
-    <h1 id="loading-text" class="hidden">MEU PORTFÓLIO</h1>
+        <h1 id="loading-text" class="hidden">MEU PORTFÓLIO</h1>
 
-    <div class="sub-icons">
-      <i class="fa-brands fa-github fa-2x hidden"></i>
-      <i class="fa-solid fa-code fa-2x hidden"></i>
-      <i class="fa-solid fa-user fa-2x hidden"></i>
-    </div>
-
-    <h2 id="designer-text" class="hidden">JOÃO PEDRO</h2>
-  </div>
-</div>
-    <header class="header-list">
-        <div class="div-list ">
-
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-
-            <ul class="ul-list">
-                <li class="active">
-                    <i class="fa-regular fa-house"></i>
-                    <a href="#home" translate="no" class="notranslate">Home</a>
-                </li>
-                <li>
-                    <i class="fa-regular fa-address-card"></i>
-                    <a href="#about">Sobre</a>
-                </li>
-                <li>
-                    <i class="fa-regular fa-folder-open"></i>
-                    <a href="#project">Projetos</a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-code"></i>
-                    <a href="#services">serviços</a>
-                </li>
-                <li>
-                    <i class="fa-regular fa-envelope"></i>
-                    <a href="#contact">Contato</a>
-                </li>
-            </ul>
+        <div class="sub-icons">
+          <i class="fa-brands fa-github fa-2x hidden"></i>
+          <i class="fa-solid fa-code fa-2x hidden"></i>
+          <i class="fa-solid fa-user fa-2x hidden"></i>
         </div>
+
+        <h2 id="designer-text" class="hidden">JOÃO PEDRO</h2>
+      </div>
+    </div>
+    <header class="header-list">
+      <div class="div-list">
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <ul class="ul-list">
+          <li class="active">
+            <i class="fa-regular fa-house"></i>
+            <a href="#home" translate="no" class="notranslate">Home</a>
+          </li>
+          <li>
+            <i class="fa-regular fa-address-card"></i>
+            <a href="#about">Sobre</a>
+          </li>
+          <li>
+            <i class="fa-regular fa-folder-open"></i>
+            <a href="#project">Projetos</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-code"></i>
+            <a href="#services">serviços</a>
+          </li>
+          <li>
+            <i class="fa-regular fa-envelope"></i>
+            <a href="#contact">Contato</a>
+          </li>
+        </ul>
+      </div>
     </header>
     <!-- home -->
     <section class="home" id="home">
-        <div class="home-container">
+      <div class="home-container">
         <div class="home-section">
-            <div class="info-home">
-                <h1>Olá, Eu sou o João Pedro!</h1>
-                <h3>Frontend Developer</h3>
-                <div class="info-p">
-                  <p>Crio experiências digitais atraentes,      funcionais e centradas no usuário.</p>
-                    <p>Com mais de um ano de experiência em Front-end, transformo ideias em realidade</p>
-                    <p>através de código limpo e projetos utilizados por empresas reais.</p>
-                   
-                </div>
-            
-                <div class="btnn">
-                    <a href="#contact" class="btn-home1"><i class="fa-solid fa-arrow-right"></i>ENTRE EM CONTATO</a>
-    
-                    <a href="#project" class="btn-home2"><i class="fa-solid     fa-download"></i>VEJA MEUS PROJETOS</a>
-                </div>
-                <div class="hhr">
-                    <hr>
-                </div>
-                <div class="follow">
-                    <p class="followw">Siga me:</p>
-                    <ul>
-                        <li><a href="https://github.com/DEV-JOTAPE11" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-pires-queiroz-6a7a84386/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a href="https://www.instagram.com/jp.devsites/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
-                    </ul>
-                </div>
+          <div class="info-home">
+            <h1>Olá, Eu sou o João Pedro!</h1>
+            <h3>Frontend Developer</h3>
+            <div class="info-p">
+              <p>
+                Crio experiências digitais atraentes, funcionais e centradas no
+                usuário.
+              </p>
+              <p>
+                Com mais de um ano de experiência em Front-end, transformo
+                ideias em realidade
+              </p>
+              <p>
+                através de código limpo e projetos utilizados por empresas
+                reais.
+              </p>
+            </div>
+
+            <div class="btnn">
+              <a href="#contact" class="btn-home1"
+                ><i class="fa-solid fa-arrow-right"></i>ENTRE EM CONTATO</a
+              >
+
+              <a href="#project" class="btn-home2"
+                ><i class="fa-solid fa-download"></i>VEJA MEUS PROJETOS</a
+              >
+            </div>
+            <div class="hhr">
+              <hr />
+            </div>
+            <div class="follow">
+              <p class="followw">Siga me:</p>
+              <ul>
+                <li>
+                  <a
+                    href="https://github.com/DEV-JOTAPE11"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/jo%C3%A3o-pedro-pires-queiroz-6a7a84386/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fa-brands fa-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/jp.devsites/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
             </div>
           </div>
-          <img src="images/foto_perfil_port.jpg" alt="">
         </div>
+        <img src="images/foto_perfil_port.jpg" alt="" />
+      </div>
     </section>
     <!-- fine home  -->
-     <section class="about" id="about" >
-        <p id="about">SOBRE MIM</p>
-        <div class="title">
+    <section class="about" id="about">
+      <p id="about">SOBRE MIM</p>
+      <div class="title">
         <h1>CONSTRUINDO MAGNÍFICAS</h1>
         <h1>EXPERIÊNCIAS DIGITAIS</h1>
-        </div>
-        <div class="hrrr">
-            <hr>
-        </div>
-        <div class="about-container">
-            <div class="info-about">
-            <div class="about-info">
-                <p>
-                    Olá! Sou João Pedro, um desenvolvedor front-end focado em criar experiências digitais que são ao mesmo tempo bonitas e funcionais. Com um sólido domínio de HTML, CSS e JavaScript, usando tecnologias como UI & UX, eu transformo designs em interfaces responsivas,interativas e acessíveis para 
-
-                </p>
-                <p>
-                  todos os usuários.
-                Minha paixão está em escrever código limpo e organizado, sempre utilizando as melhores práticas do mercado. Através do GitHub, gerencio e versiono meus projetos com eficiência, garantindo um fluxo de trabalho transparente e colaborativo.Estou sempre em busca de novos desafios para aprimorar minhas habilidades e entregar produtos digitais de alta qualidade.
-                </p>
-            </div>
-            <h2>Habilidades e Formação</h2>
-            <div class="card">
-                <div class="c1">
-                    <h3><i class="fa-solid fa-code"></i> Linguagens usadas</h3>
-                    <p>HTML,CSS,JavaScript,NodejS,React,Typescript</p>
-                </div>
-                <div class="c1">
-                    <h3><i class="fa-solid fa-graduation-cap"></i> Educação</h3>
-                    <p>Técnico em informatica (IFNMG),desenvolvedor full-stack (rocktseat)</p>
-                </div>
+      </div>
+      <div class="hrrr">
+        <hr />
+      </div>
+      <div class="about-container">
+        <div class="info-about">
+          <div class="about-info">
+            <p>
+              Olá! Sou João Pedro, um desenvolvedor front-end focado em criar
+              experiências digitais que são ao mesmo tempo bonitas e funcionais.
+              Com um sólido domínio de HTML, CSS e JavaScript, usando
+              tecnologias como UI & UX, eu transformo designs em interfaces
+              responsivas,interativas e acessíveis para
+            </p>
+            <p>
+              todos os usuários. Minha paixão está em escrever código limpo e
+              organizado, sempre utilizando as melhores práticas do mercado.
+              Através do GitHub, gerencio e versiono meus projetos com
+              eficiência, garantindo um fluxo de trabalho transparente e
+              colaborativo.Estou sempre em busca de novos desafios para
+              aprimorar minhas habilidades e entregar produtos digitais de alta
+              qualidade.
+            </p>
+          </div>
+          <h2>Habilidades e Formação</h2>
+          <div class="card">
             <div class="c1">
-                    <h3><i class="fa-solid fa-folder-open"></i> Projetos</h3>
-                    <p>+3 projetos já feito</p>
-                </div>
+              <h3><i class="fa-solid fa-code"></i> Linguagens usadas</h3>
+              <p>HTML,CSS,JavaScript,NodejS,React,Typescript</p>
             </div>
-        </div>
-        <img src="images/foto-jp-center.jpg" alt="">
-        </div>
-     </section>
-     <section class="project" id="project">
-        <p>PROJEToS</p>
-        <h1>TRABALHOS EM DESTAQUES</h1>
-        <hr>
-        <div class="info-pro">
-            <p>Uma apresentação dos meus projetos recentes onde eu mostro meu trabalho na criação de Landing pages></p>
-            <p>e desenvolvimento front-end para empresas no mercado de trabalho, usando html,css,javascript,Typescript,NodejS,React.</p>
-        </div>
-        <div class="projects-container">
-
-    <div class="project-card">
-      <img src="images/siteouro.png" alt="Site moderno para hotel com check-in online">
-      <h3>Site moderno para hotel com check-in</h3>
-      <p>Um site moderno para o hotel ouro do cerrado com um formulario para facilitar o check-in do hotel!</p>
-      <div class="skills">
-        <a href="">HTML</a>
-        <a href="">CSS</a>
-        <a href="">JavaScript</a>
-        <a href="">React</a>
-        <a href="">Typescript</a>
-      </div>
-      <div class="btns">
-        <a href="https://github.com/DEV-JOTAPE11/ouro-cerrado-hotel" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://www.hotelourodocerrado.com.br/" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i>Ver Projeto</a>
-      </div>
-    </div>
-
-    
-
-    
-
-    <div class="project-card">
-      <img src="images/site hamburgueria.png" alt="Site Hamburgueria">
-      <h3>Site para Hamburgueria e pizzaria</h3>
-      <p>Desenvolvi um site moderno e responsivo para uma hamburgueria e pizzaria, utilizando HTML, CSS e JavaScript. O projeto conta com animações de entrada, carrossel de produtos e menu interativo, garantindo uma navegação simples e intuitiva. O design foi pensado para ser leve e atrativo, funcionando perfeitamente em desktop, tablet e mobile.</p>
-      <div class="skills">
-        <a href="#">HTML</a>
-        <a href="#">CSS</a>
-        <a href="#">JavaScript</a>
-        <a href="#">Git</a>
-      </div>
-      <div class="btns">
-        <a href="https://github.com/DEV-JOTAPE11/Site-hamburgueria" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://dev-jotape11.github.io/Site-hamburgueria/" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i>Ver projeto</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="images/Captura de tela 2025-11-29 212931.png" alt="Globosat Landing Page">
-      <h3>Globosat Landing Page</h3>
-      <p>Uma landing page para a empresa Globo Sat Arinos para contrar seus serviços.</p>
-      <div class="skills">
-        <a href="">HTML</a>
-        <a href="">CSS</a>
-        <a href="">JavaScript</a>
-        <a href="">Typescript</a>
-        <a href="">React</a>
-      </div>
-      <div class="btns">
-        <a href="https://github.com/DEV-JOTAPE11/globosat-conecta-arinos-main" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://globosat-conecta-arinos-main.vercel.app/" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" ></i> Ver projeto</a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <img src="images/Captura de tela 2025-11-29 213408.png" alt="Landing Page para advogados">
-      <h3>Site para advocacia</h3>
-      <p>Web site para contratar advogados. Essa pagina Conecta você aos melhores especialistas para resolver sua causa com transparência e segurança, totalmente responsivo, usando habilidades como CSS3,HTML5,JAVASCRIPT!</p>
-      <div class="skills">
-        <a href="#">HTML</a>
-        <a href="#">CSS</a>
-        <a href="#">JS</a>
-      </div>
-      <div class="btns">
-        <a href="https://github.com/DEV-JOTAPE11/justly" class="btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://dev-jotape11.github.io/justly/" class="btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Ver projeto</a>
-      </div>
-    </div>
-  </div>
-     </section>
-     <section class="services" id="services">
-        <p>SERVIÇOS</p>
-        <h1>Recursos & Serviços</h1>
-        <hr>
-        <div class="services-container">
-
-    <div class="service-card">
-      <img src="images/web.svg" alt="Web Development">
-      <h3>Desenvolvimento web</h3>
-      <p>Criação de sites modernos, rápidos e responsivos. Utilizo as tecnologias mais recentes para garantir que o seu site funcione perfeitamente em computadores e telemóveis, oferecendo uma base sólida para o seu negócio crescer online.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="images/app.svg" alt="App Development">
-      <h3>Landing Pages de Alta Conversão</h3>
-      <p>Páginas desenhadas estrategicamente para transformar visitantes em clientes. Foco em design atraente e chamadas para ação claras, ideais para lançamentos, promoções ou captura de leads que geram resultados reais.</p>
-    </div>
-
-    <div class="service-card">
-      <img src="images/dm.svg" alt="Digital Marketing">
-      <h3>UI & UX Design</h3>
-      <p>Interfaces bonitas e fáceis de usar. O meu foco é criar designs intuitivos que não apenas encantem visualmente, mas que guiem o usuário numa jornada agradável, melhorando a satisfação e a retenção do seu público</p>
-    </div>
-
-    <div class="service-card">
-      <img src="images/seo.svg" alt="Email Marketing">
-      <h3>A Importância de um Site</h3>
-      <p>seu site é o cartão de visitas digital que funciona 24 horas por dia. Ter uma presença online profissional aumenta a credibilidade da sua marca, expande o seu alcance para novos mercados e facilita o contacto com clientes em qualquer lugar.</p>
-    </div>
-
-  </div>
-     </section>
-     <section class="contact" id="contact">
-        <p>CONTATO</p>
-        <h1>ENTRE EM CONTATO CONOSCO:</h1>
-        <div class="contact-content">
-      <div class="contact-info slide-in-left">
-        <p>Estou sempre aberto a discutir projetos interessantes e novas oportunidades. Vamos conversar!</p>
-        <div class="contact-details">
-          <div class="contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <span>joaopedropiresqueiroz10@gmail.com</span>
+            <div class="c1">
+              <h3><i class="fa-solid fa-graduation-cap"></i> Educação</h3>
+              <p>
+                Técnico em informatica (IFNMG),desenvolvedor full-stack
+                (rocktseat)
+              </p>
+            </div>
+            <div class="c1">
+              <h3><i class="fa-solid fa-folder-open"></i> Projetos</h3>
+              <p>+3 projetos já feito</p>
+            </div>
           </div>
-          <div class="contact-item">
-            <i class="fa-solid fa-phone"></i>
-            <span>+55 (38)998304003</span>
+        </div>
+        <img src="images/foto-jp-center.jpg" alt="" />
+      </div>
+    </section>
+    <section class="project" id="project">
+      <p>PROJEToS</p>
+      <h1>TRABALHOS EM DESTAQUES</h1>
+      <hr />
+      <div class="info-pro">
+        <p>
+          Uma apresentação dos meus projetos recentes onde eu mostro meu
+          trabalho na criação de Landing pages>
+        </p>
+        <p>
+          e desenvolvimento front-end para empresas no mercado de trabalho,
+          usando html,css,javascript,Typescript,NodejS,React.
+        </p>
+      </div>
+      <div class="projects-container">
+        <div class="project-card">
+          <img
+            src="images/siteouro.png"
+            alt="Site moderno para hotel com check-in online"
+          />
+          <h3>Site moderno para hotel com check-in</h3>
+          <p>
+            Um site moderno para o hotel ouro do cerrado com um formulario para
+            facilitar o check-in do hotel!
+          </p>
+          <div class="skills">
+            <a href="">HTML</a>
+            <a href="">CSS</a>
+            <a href="">JavaScript</a>
+            <a href="">React</a>
+            <a href="">Typescript</a>
           </div>
-          <div class="contact-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Brasil, Minas Gerais</span>
+          <div class="btns">
+            <a
+              href="https://github.com/DEV-JOTAPE11/ouro-cerrado-hotel"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn"
+              ><i class="fab fa-github"></i> GitHub</a
+            >
+            <a
+              href="https://www.hotelourodocerrado.com.br/"
+              class="btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fas fa-external-link-alt"></i>Ver Projeto</a
+            >
           </div>
         </div>
 
-        <div class="social-links">
-          <a href="https://github.com/DEV-JOTAPE11" class="social-link" target="_blank">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-pires-queiroz-6a7a84386/" class="social-link" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="https://wa.me/38998304003" class="social-link" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
+        <div class="project-card">
+          <img src="images/site hamburgueria.png" alt="Site Hamburgueria" />
+          <h3>Site para Hamburgueria e pizzaria</h3>
+          <p>
+            Desenvolvi um site moderno e responsivo para uma hamburgueria e
+            pizzaria, utilizando HTML, CSS e JavaScript. O projeto conta com
+            animações de entrada, carrossel de produtos e menu interativo,
+            garantindo uma navegação simples e intuitiva. O design foi pensado
+            para ser leve e atrativo, funcionando perfeitamente em desktop,
+            tablet e mobile.
+          </p>
+          <div class="skills">
+            <a href="#">HTML</a>
+            <a href="#">CSS</a>
+            <a href="#">JavaScript</a>
+            <a href="#">Git</a>
+          </div>
+          <div class="btns">
+            <a
+              href="https://github.com/DEV-JOTAPE11/Site-hamburgueria"
+              class="btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-github"></i> GitHub</a
+            >
+            <a
+              href="https://dev-jotape11.github.io/Site-hamburgueria/"
+              class="btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fas fa-external-link-alt"></i>Ver projeto</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img
+            src="images/Captura de tela 2025-11-29 212931.png"
+            alt="Globosat Landing Page"
+          />
+          <h3>Globosat Landing Page</h3>
+          <p>
+            Uma landing page para a empresa Globo Sat Arinos para contrar seus
+            serviços.
+          </p>
+          <div class="skills">
+            <a href="">HTML</a>
+            <a href="">CSS</a>
+            <a href="">JavaScript</a>
+            <a href="">Typescript</a>
+            <a href="">React</a>
+          </div>
+          <div class="btns">
+            <a
+              href="https://github.com/DEV-JOTAPE11/globosat-conecta-arinos-main"
+              class="btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-github"></i> GitHub</a
+            >
+            <a
+              href="https://globosat-conecta-arinos-main.vercel.app/"
+              class="btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fas fa-external-link-alt"></i> Ver projeto</a
+            >
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img
+            src="images/Captura de tela 2025-11-29 213408.png"
+            alt="Landing Page para advogados"
+          />
+          <h3>Site para advocacia</h3>
+          <p>
+            Web site para contratar advogados. Essa pagina Conecta você aos
+            melhores especialistas para resolver sua causa com transparência e
+            segurança, totalmente responsivo, usando habilidades como
+            CSS3,HTML5,JAVASCRIPT!
+          </p>
+          <div class="skills">
+            <a href="#">HTML</a>
+            <a href="#">CSS</a>
+            <a href="#">JS</a>
+          </div>
+          <div class="btns">
+            <a
+              href="https://github.com/DEV-JOTAPE11/justly"
+              class="btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-github"></i> GitHub</a
+            >
+            <a
+              href="https://dev-jotape11.github.io/justly/"
+              class="btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fas fa-external-link-alt"></i> Ver projeto</a
+            >
+          </div>
         </div>
       </div>
+    </section>
+    <section class="services" id="services">
+      <p>SERVIÇOS</p>
+      <h1>Recursos & Serviços</h1>
+      <hr />
+      <div class="services-container">
+        <div class="service-card">
+          <img src="images/web.svg" alt="Web Development" />
+          <h3>Desenvolvimento web</h3>
+          <p>
+            Criação de sites modernos, rápidos e responsivos. Utilizo as
+            tecnologias mais recentes para garantir que o seu site funcione
+            perfeitamente em computadores e telemóveis, oferecendo uma base
+            sólida para o seu negócio crescer online.
+          </p>
+        </div>
 
-      <div class="contact-form slide-in-right">
-        <form id="contact-form">
-          <div class="form-group">
-            <input type="text" placeholder="Seu nome" required name="user_name">
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder="Seu email" required name="user_email">
-          </div>
-          <div class="form-group">
-            <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
-          </div>
-          
-          <button type="submit" class="btn-send">
-          <a href="https://wa.me/38998304003" target="_blank" class="btn-send-wpp">
-            Enviar Mensagem 
-          </a>
-          </button>
-      
-        </form>
+        <div class="service-card">
+          <img src="images/app.svg" alt="App Development" />
+          <h3>Landing Pages de Alta Conversão</h3>
+          <p>
+            Páginas desenhadas estrategicamente para transformar visitantes em
+            clientes. Foco em design atraente e chamadas para ação claras,
+            ideais para lançamentos, promoções ou captura de leads que geram
+            resultados reais.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <img src="images/dm.svg" alt="Digital Marketing" />
+          <h3>UI & UX Design</h3>
+          <p>
+            Interfaces bonitas e fáceis de usar. O meu foco é criar designs
+            intuitivos que não apenas encantem visualmente, mas que guiem o
+            usuário numa jornada agradável, melhorando a satisfação e a retenção
+            do seu público
+          </p>
+        </div>
+
+        <div class="service-card">
+          <img src="images/seo.svg" alt="Email Marketing" />
+          <h3>A Importância de um Site</h3>
+          <p>
+            seu site é o cartão de visitas digital que funciona 24 horas por
+            dia. Ter uma presença online profissional aumenta a credibilidade da
+            sua marca, expande o seu alcance para novos mercados e facilita o
+            contacto com clientes em qualquer lugar.
+          </p>
+        </div>
       </div>
-    </div>
-     </section>
-     <footer class="footer">
-  <div class="footer-container">
-    <h2 class="footer-logo">JOÃO PEDRO</h2>
-    <div class="footer-social">
-      <a href="https://github.com/DEV-JOTAPE11" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-pires-queiroz-6a7a84386/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://wa.me/38998304003" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
-    <p class="footer-copy">&copy; 2025. Todos os direitos reservados.</p>
-  </div>
-</footer>
+    </section>
+    <section class="contact" id="contact">
+      <p>CONTATO</p>
+      <h1>ENTRE EM CONTATO CONOSCO:</h1>
+      <div class="contact-content">
+        <div class="contact-info slide-in-left">
+          <p>
+            Estou sempre aberto a discutir projetos interessantes e novas
+            oportunidades. Vamos conversar!
+          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>joaopedropiresqueiroz10@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+55 (38)998304003</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Brasil, Minas Gerais</span>
+            </div>
+          </div>
 
-     <script src="main.js"></script>
-</body>
+          <div class="social-links">
+            <a
+              href="https://github.com/DEV-JOTAPE11"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jo%C3%A3o-pedro-pires-queiroz-6a7a84386/"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              href="https://wa.me/38998304003"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form slide-in-right">
+          <form id="contact-form">
+            <div class="form-group">
+              <input
+                type="text"
+                placeholder="Seu nome"
+                required
+                name="user_name"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                placeholder="Seu email"
+                required
+                name="user_email"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                placeholder="Sua mensagem"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-send">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-container">
+        <h2 class="footer-logo">JOÃO PEDRO</h2>
+        <div class="footer-social">
+          <a
+            href="https://github.com/DEV-JOTAPE11"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/jo%C3%A3o-pedro-pires-queiroz-6a7a84386/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            href="https://wa.me/38998304003"
+            target="_blank"
+            aria-label="WhatsApp"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+        </div>
+        <p class="footer-copy">&copy; 2025. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
 </html>
