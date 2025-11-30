@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -605,6 +606,20 @@ hr {
   background: #2c36d9;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .contact-content {
@@ -795,11 +810,60 @@ body {
 /* Phone layout */
 @media (max-width: 768px) {
   header {
-    display: none;
-  }
+        display: block !important; 
+        background-color: transparent;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    .div-list {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1002;
+    }
+
+    /* Animação do X */
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* Menu Lateral */
+    .ul-list {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        height: 100vh; /* Tela inteira */
+        text-align: center;
+        transition: 0.3s;
+        padding-top: 80px;
+        z-index: 1001;
+    }
+
+    .ul-list.active {
+        left: 0;
+    }
+
+    .ul-list li {
+        margin: 25px 0;
+    }
 
   .home, .about, .project, .services, .contact {
     margin: 100px 20px;
+  }
+
+  #home {
+    margin: 80px auto;
   }
 
   .home-container, .about-container, .contact-content {
