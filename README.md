@@ -1,8 +1,5 @@
 Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi desenvolvido para apresentar minhas habilidades, experiência e os projetos que desenvolvi ao longo da minha jornada como Desenvolvedor Front-End.
 
-![Preview do Projeto](images/foto-jp-center.jpg)
-*(Você pode substituir este caminho por um print da tela inicial do seu site)*
-
 ## 🚀 Sobre o Projeto
 
 Este é um site de portfólio totalmente responsivo e interativo. O objetivo é criar uma vitrine profissional que funcione perfeitamente em desktops, tablets e dispositivos móveis, oferecendo uma experiência de usuário (UX) fluida e moderna.
@@ -48,7 +45,7 @@ Este é um projeto estático, o que significa que não requer instalação de de
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git](https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git)
+    https://github.com/DEV-JOTAPE11/Portf-lio-atualizado.git
     ```
 2.  **Abra o projeto:**
     Navegue até a pasta do projeto e abra o arquivo `index.html` em qualquer navegador moderno.
