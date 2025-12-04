@@ -52,6 +52,42 @@ window.addEventListener('scroll', () => {
 const revealElements = document.querySelectorAll('.home-container, .about-container, .projects-container, .services-container, .contact-content');
 revealElements.forEach(el => el.classList.add('reveal'));
 
+function checkReveal() {
+  const windowHeight = window.innerHeight;
+  const revealPoint = 150;
+
+  revealElements.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+    
+    // Se o elemento estiver visível na tela, mostra ele
+    if(elementTop < windowHeight - revealPoint){
+      el.classList.add('active-reveal');
+    }
+  });
+}
+
+window.addEventListener('scroll', () => {
+  let scrollPos = window.scrollY + 100;
+
+  // Lógica do Menu Ativo (mantida)
+  sections.forEach(section => {
+    if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+      removeActive();
+      const activeLink = document.querySelector(`.ul-list li a[href="#${section.id}"]`);
+      if (activeLink) activeLink.parentElement.classList.add('active');
+    }
+  });
+
+  if(window.scrollY > 500){
+    backToTop.style.display = "flex";
+  } else {
+    backToTop.style.display = "none";
+  }
+
+  // CHAMA A FUNÇÃO DE ANIMAÇÃO
+  checkReveal();
+});
+
 const backToTop = document.createElement('div');
 backToTop.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
 backToTop.id = "back-to-top";
@@ -143,6 +179,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loadingScreen.style.opacity = '0';
     setTimeout(() => loadingScreen.style.display='none', 500);
     mainPage.classList.add("visible");
+
+    checkReveal(); // Força a verificação da animação assim que o site abre
   }, 4000);
 });
 
@@ -188,3 +226,4 @@ if (contactForm) {
     this.reset();
   });
 }
+
