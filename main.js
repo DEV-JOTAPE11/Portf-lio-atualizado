@@ -141,6 +141,7 @@ function type() {
 document.addEventListener('DOMContentLoaded', type);
 
 // 7. Tela de Carregamento (Loading Screen)
+// 7. Tela de Carregamento (Loading Screen)
 document.addEventListener("DOMContentLoaded", () => {
   const loadingText = document.getElementById("loading-text");
   const mainIcon = document.querySelector(".main-icon");
@@ -158,6 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Sequência de animação da tela de loading
   showElement(loadingText, 0);          
   showElement(mainIcon, 800);         
   subIcons.forEach((icon, idx) => {
@@ -165,14 +167,23 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   showElement(designerText, 2800);    
 
+  // Fim do loading e entrada do site
   setTimeout(() => {
-    loadingScreen.style.opacity = '0';
-    setTimeout(() => loadingScreen.style.display='none', 500);
-    mainPage.classList.add("visible");
+    loadingScreen.style.opacity = '0'; // Começa a sumir a tela preta
+    
+    setTimeout(() => {
+        loadingScreen.style.display='none';
+    }, 500);
 
-    // AQUI ESTÁ O SEGREDO:
-    // Chamamos a função assim que o site aparece, sem esperar o scroll!
-    checkReveal(); 
+    mainPage.classList.add("visible"); // O site começa a aparecer suavemente
+
+    // --- A MUDANÇA ESTÁ AQUI ---
+    // Adicionamos um atraso de 500ms. 
+    // Isso espera o site ficar visível antes de iniciar a animação dos elementos subindo.
+    setTimeout(() => {
+        checkReveal(); 
+    }, 500); 
+    // ---------------------------
 
   }, 4000);
 });
