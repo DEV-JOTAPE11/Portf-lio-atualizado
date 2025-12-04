@@ -1,3 +1,6 @@
+/* --- INÍCIO DO ARQUIVO MAIN.JS --- */
+
+// 1. Definição dos elementos de navegação
 const navLinks = document.querySelectorAll('.ul-list li a');
 const sections = document.querySelectorAll('section');
 
@@ -21,37 +24,14 @@ navLinks.forEach(link => {
   });
 });
 
-window.addEventListener('scroll', () => {
-  let scrollPos = window.scrollY + 100;
-
-  sections.forEach(section => {
-    if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-      removeActive();
-      const activeLink = document.querySelector(`.ul-list li a[href="#${section.id}"]`);
-      if (activeLink) activeLink.parentElement.classList.add('active');
-    }
-  });
-
-  if(window.scrollY > 500){
-    backToTop.style.display = "flex";
-  } else {
-    backToTop.style.display = "none";
-  }
-
-  revealElements.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-    const revealPoint = 150;
-
-    if(elementTop < windowHeight - revealPoint){
-      el.classList.add('active-reveal');
-    }
-  });
-});
-
+// 2. Definição e Configuração da Animação (Reveal)
+// IMPORTANTE: Definimos isso ANTES de usar no scroll
 const revealElements = document.querySelectorAll('.home-container, .about-container, .projects-container, .services-container, .contact-content');
+
+// Adiciona a classe inicial invisível
 revealElements.forEach(el => el.classList.add('reveal'));
 
+// Função que verifica se deve mostrar o elemento
 function checkReveal() {
   const windowHeight = window.innerHeight;
   const revealPoint = 150;
@@ -59,35 +39,14 @@ function checkReveal() {
   revealElements.forEach(el => {
     const elementTop = el.getBoundingClientRect().top;
     
-    // Se o elemento estiver visível na tela, mostra ele
+    // Se o elemento estiver na tela, mostra ele
     if(elementTop < windowHeight - revealPoint){
       el.classList.add('active-reveal');
     }
   });
 }
 
-window.addEventListener('scroll', () => {
-  let scrollPos = window.scrollY + 100;
-
-  // Lógica do Menu Ativo (mantida)
-  sections.forEach(section => {
-    if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-      removeActive();
-      const activeLink = document.querySelector(`.ul-list li a[href="#${section.id}"]`);
-      if (activeLink) activeLink.parentElement.classList.add('active');
-    }
-  });
-
-  if(window.scrollY > 500){
-    backToTop.style.display = "flex";
-  } else {
-    backToTop.style.display = "none";
-  }
-
-  // CHAMA A FUNÇÃO DE ANIMAÇÃO
-  checkReveal();
-});
-
+// 3. Botão Voltar ao Topo
 const backToTop = document.createElement('div');
 backToTop.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
 backToTop.id = "back-to-top";
@@ -117,12 +76,38 @@ backToTop.addEventListener('click', () => {
 backToTop.addEventListener('mouseover', () => backToTop.style.transform = 'scale(1.2)');
 backToTop.addEventListener('mouseout', () => backToTop.style.transform = 'scale(1)');
 
+// 4. Evento de Scroll Unificado
+window.addEventListener('scroll', () => {
+  let scrollPos = window.scrollY + 100;
+
+  // Lógica do Menu Ativo
+  sections.forEach(section => {
+    if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+      removeActive();
+      const activeLink = document.querySelector(`.ul-list li a[href="#${section.id}"]`);
+      if (activeLink) activeLink.parentElement.classList.add('active');
+    }
+  });
+
+  // Mostra/Esconde botão topo
+  if(window.scrollY > 500){
+    backToTop.style.display = "flex";
+  } else {
+    backToTop.style.display = "none";
+  }
+
+  // CHAMA A ANIMAÇÃO AO ROLAR
+  checkReveal();
+});
+
+// 5. Efeitos dos Cards
 const cards = document.querySelectorAll('.project-card, .c1, .service-card');
 cards.forEach(card => {
   card.addEventListener('mouseenter', () => card.style.transform = 'translateY(-8px) scale(1.05)');
   card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0) scale(1)');
 });
 
+// 6. Efeito de Digitação
 const typingElement = document.querySelector('.info-home h3'); 
 const words = ["Desenvolvedor front-end", "Especialista em landing pages", "UI/UX Designer", "Desenvolvedor Web"];
 let wordIndex = 0;
@@ -134,7 +119,9 @@ function type() {
     const currentWord = words[wordIndex];
     let displayedText = currentWord.substring(0, charIndex);
     
-    typingElement.innerHTML = displayedText + '<span class="cursor">|</span>';
+    if(typingElement) {
+        typingElement.innerHTML = displayedText + '<span class="cursor">|</span>';
+    }
 
     if (!isDeleting && charIndex < currentWord.length) {
         charIndex++;
@@ -153,6 +140,7 @@ function type() {
 
 document.addEventListener('DOMContentLoaded', type);
 
+// 7. Tela de Carregamento (Loading Screen)
 document.addEventListener("DOMContentLoaded", () => {
   const loadingText = document.getElementById("loading-text");
   const mainIcon = document.querySelector(".main-icon");
@@ -162,10 +150,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const loadingScreen = document.getElementById("loading-screen");
 
   function showElement(element, delay=0){
-    setTimeout(() => {
-      element.classList.remove("hidden");
-      element.classList.add("fall");
-    }, delay);
+    if(element) {
+        setTimeout(() => {
+        element.classList.remove("hidden");
+        element.classList.add("fall");
+        }, delay);
+    }
   }
 
   showElement(loadingText, 0);          
@@ -180,10 +170,30 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => loadingScreen.style.display='none', 500);
     mainPage.classList.add("visible");
 
-    checkReveal(); // Força a verificação da animação assim que o site abre
+    // AQUI ESTÁ O SEGREDO:
+    // Chamamos a função assim que o site aparece, sem esperar o scroll!
+    checkReveal(); 
+
   }, 4000);
 });
 
+// 8. Lógica do Formulário WhatsApp
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = this.user_name.value;
+    const email = this.user_email.value;
+    const message = this.message.value;
+    const fullMessage = `Olá! Meu nome é *${name}*.\nMeu email é: ${email}\n\n*Mensagem:* ${message}`;
+    const phoneNumber = "5538998304003"; 
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
+    window.open(whatsappUrl, '_blank');
+    this.reset();
+  });
+}
+
+// 9. Lógica do Menu Mobile (Hambúrguer)
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".ul-list");
 
@@ -198,32 +208,4 @@ if (hamburger && navMenu) {
         navMenu.classList.remove("active");
     }));
 }
-
-const contactForm = document.getElementById('contact-form');
-
-if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault(); // Impede a página de recarregar
-
-    // 1. Pega os valores digitados
-    const name = this.user_name.value;
-    const email = this.user_email.value;
-    const message = this.message.value;
-
-    // 2. Formata a mensagem que vai aparecer no WhatsApp
-    // O "\n" cria uma quebra de linha
-    const fullMessage = `Olá! Meu nome é ${name}.\nMeu email é: ${email}\n\nMensagem: ${message}`;
-
-    // 3. Cria o link do WhatsApp com a mensagem codificada
-    // Substitua o número abaixo pelo seu se necessário (com código do país e DDD)
-    const phoneNumber = "5538998304003"; 
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
-
-    // 4. Abre o WhatsApp numa nova aba
-    window.open(whatsappUrl, '_blank');
-    
-    // Opcional: Limpa o formulário depois de enviar
-    this.reset();
-  });
-}
-
+/* --- FIM DO ARQUIVO MAIN.JS --- */
