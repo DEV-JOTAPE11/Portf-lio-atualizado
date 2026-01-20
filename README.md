@@ -1,5 +1,11 @@
 Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi desenvolvido para apresentar minhas habilidades, experiência e os projetos que desenvolvi ao longo da minha jornada como Desenvolvedor Front-End.
 
+
+<p align="center">
+  <img alt="Preview do Portfólio" src="images/print-atuali-port.png" width="100%" style="border-radius: 8px; border: 2px solid #00eeff;">
+</p>
+
+
 ## 🚀 Sobre o Projeto
 
 Este é um site de portfólio totalmente responsivo e interativo. O objetivo é criar uma vitrine profissional que funcione perfeitamente em desktops, tablets e dispositivos móveis, oferecendo uma experiência de usuário (UX) fluida e moderna.
@@ -10,6 +16,9 @@ O site inclui seções para:
 - **Projetos:** Galeria com os principais trabalhos e links para repositórios/demos.
 - **Serviços:** Detalhamento do que ofereço (Web Development, UI/UX, etc.).
 - **Contato:** Formulário visual e links para redes sociais.
+
+
+
 
 ## 🛠️ Tecnologias Utilizadas
 
