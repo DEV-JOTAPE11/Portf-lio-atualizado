@@ -73,7 +73,7 @@ Gostou do meu trabalho? Vamos conversar!
 
 - **LinkedIn:** [João Pedro](https://www.linkedin.com/in/jo%C3%A3o-pedro-pires-queiroz-6a7a84386/)
 - **GitHub:** [DEV-JOTAPE11](https://github.com/DEV-JOTAPE11)
-- **Instagram:** [@jp.devsites](https://www.instagram.com/jp.devsites/)
+
 
 ---
 Desenvolvido com 💙 por João Pedro.
